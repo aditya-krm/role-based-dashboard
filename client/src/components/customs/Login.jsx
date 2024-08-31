@@ -20,10 +20,10 @@ function Login({ switchToSignup }) {
   const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
 
     try {
-      console.log(form);
+      // console.log(form);
       const response = await axios.post("/api/auth/login", form, {
         withCredentials: true,
       });
@@ -33,7 +33,7 @@ function Login({ switchToSignup }) {
       // Optionally, you can switch to login after successful signup
       // switchToLogin();
     } catch (err) {
-      console.log(err.response?.data?.message || "Something went wrong");
+      // console.log(err.response?.data?.message || "Something went wrong");
       toast("Invalid credentials", "error");
     }
   };

@@ -42,7 +42,7 @@ export const signup = async (req, res) => {
       role: newUser.role,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -54,7 +54,7 @@ export const login = async (req, res) => {
         .status(400)
         .json({ message: "Please provide both username and password" });
     }
-    console.log({ username, password });
+    // console.log({ username, password });
 
     const user = await User.findOne({ username });
     if (!user) {

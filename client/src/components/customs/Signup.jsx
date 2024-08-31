@@ -31,7 +31,7 @@ function Signup({ switchToLogin }) {
     e.preventDefault();
     try {
       const response = await axios.post("/api/auth/signup", form);
-      console.log(response.data); // Handle success (e.g., redirect to dashboard)
+      // console.log(response.data); // Handle success (e.g., redirect to dashboard)
       // Optionally, you can switch to login after successful signup
       switchToLogin();
     } catch (err) {

@@ -12,10 +12,10 @@ function DashBoard() {
         const response = await axios.get(`/api/dashboard/${role}`, {
           withCredentials: true,
         });
-        console.log(response.data);
+        // console.log(response.data);
         setRole(response.data);
       } catch (error) {
-        console.log(error.response?.data?.message || "Something went wrong");
+        // console.log(error.response?.data?.message || "Something went wrong");
       }
     };
     fetchUser();

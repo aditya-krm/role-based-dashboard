@@ -26,7 +26,11 @@ app.use("/api/dashboard", dashboardRoutes);
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
+
 app.listen(PORT, () => {
   connectToDB();
-  console.log(`Server running on port ${PORT}`);
+  // console.log(`Server running on port ${PORT}`);
 });
