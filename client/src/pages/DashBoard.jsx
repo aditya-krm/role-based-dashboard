@@ -17,7 +17,7 @@ function DashBoard() {
         }
 
         const userRole = location.state.role;
-        const response = await axios.get(`api/dashboard/${userRole}`, {
+        const response = await axios.get(`/api/dashboard/${userRole}`, {
           withCredentials: true,
         });
         setRole(response.data);
