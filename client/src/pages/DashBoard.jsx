@@ -17,10 +17,9 @@ function DashBoard() {
         }
 
         const userRole = location.state.role;
-        const response = await axios.get(
-          `http://localhost:3000/api/dashboard/${userRole}`,
-          { withCredentials: true }
-        );
+        const response = await axios.get(`api/dashboard/${userRole}`, {
+          withCredentials: true,
+        });
         setRole(response.data);
       } catch (error) {
         console.log(error.response?.data?.message || "Something went wrong");
